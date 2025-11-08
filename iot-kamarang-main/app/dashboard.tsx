@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRouter } from "expo-router";
 import Slider from "@react-native-community/slider";
 import {
   View,
@@ -46,6 +47,7 @@ export default function DashboardRiwayatScreen() {
   const [kipasVentilasi, setKipasVentilasi] = useState(false);
   const [lampuGrowLight, setLampuGrowLight] = useState(true);
   const [kecepatanKipas, setKecepatanKipas] = useState(45);
+  const router = useRouter();
 
   // State kontrol manual PH dan TDS
   const [phNaik, setPhNaik] = useState(true);
@@ -65,6 +67,7 @@ export default function DashboardRiwayatScreen() {
   const handleLogout = () => {
     alert("Keluar dari akun");
     // Logika logout bisa ditambahkan di sini
+    router.replace("/");
   };
 
   const renderDashboard = () => (
