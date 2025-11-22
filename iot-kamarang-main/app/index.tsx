@@ -9,7 +9,7 @@ export default function App() {
   const router = useRouter();
 
   const onLoginPress = () => {
-    // Bisa tambahkan validasi login di sini sebelum navigate
+    
     router.push('/dashboard');
   };
 
